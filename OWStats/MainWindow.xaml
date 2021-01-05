@@ -6,9 +6,80 @@
         xmlns:local="clr-namespace:OWStats"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="460" Width="800">
     <Grid>
-        <ListBox x:Name="TestBox"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
+        <Label Content="Username:"></Label>
+        <Label x:Name="lb_name" Grid.Column="1" Grid.Row="0"/>
+        <Label Content="Tag:" Grid.Row="1"></Label>
+        <Label x:Name="lb_tag" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="Level:" Grid.Row="2"></Label>
+        <Label x:Name="lb_level" Grid.Column="1" Grid.Row="2"/>
+        <ComboBox x:Name="cb_changeModi" Grid.Column="0" Grid.Row="3" SelectionChanged="changeModi_SelectionChanged">
+            <ComboBoxItem Content="QuickPlay"></ComboBoxItem>
+            <ComboBoxItem Content="Competitive"></ComboBoxItem>
+        </ComboBox>
+        <Label Content="Won:" Grid.Row="4"></Label>
+        <Label x:Name="lb_won" Grid.Column="1" Grid.Row="4"/>
+        <Label Content="Lose:" Grid.Row="5"></Label>
+        <Label x:Name="lb_lose" Grid.Column="1" Grid.Row="5"/>
+        <Label Content="Total:" Grid.Row="6"></Label>
+        <Label x:Name="lb_total" Grid.Column="1" Grid.Row="6"/>
+        <Label Content="Winrate:" Grid.Row="7"></Label>
+        <Label x:Name="lb_winRate" Grid.Column="1" Grid.Row="7"/>
+
+        <Label Content="Avg. Eliminations:" Grid.Row="8"></Label>
+        <Label x:Name="lb_kills" Grid.Column="1" Grid.Row="8"/>
+        <Label Content="Avg. DamageDone:" Grid.Row="9"></Label>
+        <Label x:Name="lb_damage" Grid.Column="1" Grid.Row="9"/>
+        <Label Content="Avg. Deaths:" Grid.Row="10"></Label>
+        <Label x:Name="lb_death" Grid.Column="1" Grid.Row="10"/>
+        <Label Content="Avg. Healing:" Grid.Row="11"></Label>
+        <Label x:Name="lb_heal" Grid.Column="1" Grid.Row="11"/>
+        <Label Content="Avg. Solo Kills:" Grid.Row="12"></Label>
+        <Label x:Name="lb_soloKills" Grid.Column="1" Grid.Row="12"/>
+
+
+        <Button Content="Refresh" Grid.Column="1" Grid.Row="13" Click="Button_Click"/>
+        <Image Grid.Row="0" Grid.Column="3" x:Name="icon" Grid.RowSpan="7" Width="200"></Image>
+        <Image Grid.Row="6" Grid.Column="3" x:Name="stars" Grid.RowSpan="3" Width="200"></Image>
+
+        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+            <Image x:Name="tank_icon" HorizontalAlignment="Left" Height="30" Width="30"></Image>
+            <Label x:Name="tank_sr" Width="170"></Label>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Horizontal">
+            <Image HorizontalAlignment="Left" Height="30" Width="30"></Image>
+            <Label Width="170"></Label>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="2" Orientation="Horizontal">
+            <Image HorizontalAlignment="Left" Height="30" Width="30"></Image>
+            <Label Width="170"></Label>
+        </StackPanel>
     </Grid>
 </Window>
